@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach</title>
+    <script>
+        var listaFuncionarios = ['Viviane', 'Rosangela', 'Miguel', 'Lucas', 'Fernanda'];
+
+
+        listaFuncionarios.forEach(function(valor, indice, array) { //pode recuperar só uma das variaveis.
+            console.log('Indice: ' + indice + ' | Valor: ' + valor);
+            if (valor == 'Viviane') {
+                array[indice] = 'Roberta';
+            }
+            console.log(array);
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .selecionado {
+            background: #fffb00;
+            color: #000;
+        }
+        
+        .correto {
+            background: #00FF00;
+            color: #FFF;
+        }
+        
+        .incorreto {
+            background: #FF0000;
+            color: #FFF;
+        }
+    </style>
+
+    <script>
+        function modificaClasse() {
+            document.getElementById('campo').className = 'selecionado'
+        }
+
+        function verifica() {
+            if (document.getElementById('campo').value.length < 3) {
+                document.getElementById('campo').className = 'incorreto'
+            } else {
+                document.getElementById('campo').className = 'correto'
+            }
+        }
+    </script>
+
+    <title>Javascript</title>
+</head>
+
+<body>
+    <input onblur="verifica()" onfocus="modificaClasse()" type="text" name="" id="campo">
+</body>
+
+</html>

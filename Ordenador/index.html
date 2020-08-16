@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenador</title>
+</head>
+
+<body>
+
+    <input type="text" name="" id="caixa_texto">
+    <button onclick="adicionar()" id="add">Adicionar</button>
+    <button onclick="ordenar()" id="order">Ordenar</button>
+
+
+    <script>
+        var objetos = ['Cadeira', 'Impressora', 'Garfo'];
+
+        function adicionar() {
+            if (document.getElementById('caixa_texto').value === '') {
+                alert('Digite algo na caixa de texto');
+            } else if (objetos.indexOf(document.getElementById('caixa_texto').value) !== -1) {
+                alert('Ja existe esse objeto na lista');
+            } else {
+                objetos.push(document.getElementById('caixa_texto').value);
+                console.log(objetos);
+                document.getElementById('caixa_texto').value = '';
+            }
+        }
+
+        function ordenar() {
+            console.log(objetos.sort());
+        }
+    </script>
+</body>
+
+</html>
